@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Text to Voice Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Text to Voice Converter</h1>
+
+    <textarea id="text" placeholder="Enter text here..."></textarea>
+
+    <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+    </select>
+
+    <select id="voiceSelect">
+        <option value="">Select Voice</option>
+    </select>
+
+    <label>Speed</label>
+    <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+    <label>Pitch</label>
+    <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+
+    <label>Volume</label>
+    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+
+    <div class="buttons">
+        <button onclick="speakText()">Speak</button>
+        <button onclick="pauseSpeech()">Pause</button>
+        <button onclick="resumeSpeech()">Resume</button>
+        <button onclick="stopSpeech()">Stop</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
